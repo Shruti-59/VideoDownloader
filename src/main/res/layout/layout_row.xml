@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="2dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="false">
+
+
+        <LinearLayout
+                    android:id="@+id/relHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+            android:orientation="vertical"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:text="john@gmail"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_image_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="340dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="visible"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_launcher_background"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+
+                    <VideoView
+                        android:id="@+id/videoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="340dp"
+                        android:visibility="gone"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="-1dp"
+                        android:layout_marginBottom="0dp"
+                        >
+
+                    </VideoView>
+
+                    <ProgressBar
+                        android:id="@+id/progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:theme="@style/ProgrssStyle" />
+
+                    <ImageView
+                        android:id="@+id/videoIcon"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_baseline_play_"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible"
+                        app:tint="@color/new_white" />
+
+                    <ImageView
+                        android:id="@+id/pauseIcon"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_baseline_pause_24"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        app:tint="@color/new_white" />
+
+                    <ImageView
+                        android:id="@+id/downloadIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_baseline_arrow_downward"
+                        android:layout_alignParentBottom="true"
+                        android:visibility="gone"
+                        app:tint="@color/new_white" />
+
+
+                </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
